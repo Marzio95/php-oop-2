@@ -92,3 +92,20 @@ class User
         return $this;
     }
 }
+
+class Product
+{
+    private $price;
+
+    public function getPrice()
+    {
+        return $this->price;
+    }
+
+    public function setPrice($price)
+    {
+        $this->price = $price;
+
+        return $this;
+    }
+}
