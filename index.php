@@ -96,6 +96,7 @@ class User
 class Product
 {
     private $price;
+    private $FinalPrice;
     private $animal;
 
     public function getPrice()
@@ -118,6 +119,18 @@ class Product
     public function setAnimal($animal)
     {
         $this->animal = $animal;
+
+        return $this;
+    }
+
+    public function getFinalPrice($registerdUser, $discount)
+    {
+        return $this->FinalPrice = $this->price - ($this->price / 100 * $registerdUser->$discount);
+    }
+
+    public function setFinalPrice($FinalPrice)
+    {
+        $this->FinalPrice = $FinalPrice;
 
         return $this;
     }
