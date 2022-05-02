@@ -96,6 +96,7 @@ class User
 class Product
 {
     private $price;
+    private $animal;
 
     public function getPrice()
     {
@@ -105,6 +106,18 @@ class Product
     public function setPrice($price)
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    public function getAnimal()
+    {
+        return $this->animal;
+    }
+
+    public function setAnimal($animal)
+    {
+        $this->animal = $animal;
 
         return $this;
     }
