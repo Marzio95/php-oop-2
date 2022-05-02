@@ -3,8 +3,14 @@
 class Product
 {
     private $price;
-    private $FinalPrice;
+    private $finalPrice;
     private $animal;
+
+    public function __construct($_price, $_animal)
+    {
+        $this->price = $_price;
+        $this->animal = $_animal;
+    }
 
     public function getPrice()
     {
@@ -30,13 +36,13 @@ class Product
         return $this;
     }
 
-    public function setFinalPrice($registerdUser, $discount)
+    public function setfinalPrice($registerdUser, $discount)
     {
-        return $this->FinalPrice = $this->price - ($this->price / 100 * $registerdUser->$discount);
+        return $this->finalPrice = $this->price - ($this->price / 100 * $registerdUser->$discount);
     }
 
-    public function getFinalPrice()
+    public function getfinalPrice()
     {
-        return $this->FinalPrice;
+        return $this->finalPrice;
     }
 }

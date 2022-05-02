@@ -86,9 +86,10 @@ class User
 
     public function setDeadlineCreditCard($deadlineCreditCard)
     {
-        if ($deadlineCreditCard > date("j F Y"))
-            $this->deadlineCreditCard = $deadlineCreditCard;
-
-        return $this;
+        if (strtotime($deadlineCreditCard) > strtotime('now')) {
+            echo ('<h2>La tua carta di credito è valida</h2>');
+        } else {
+            echo ('<h2>La tua carta di credito è scaduta</h2>');
+        }
     }
 }

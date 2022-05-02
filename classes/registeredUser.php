@@ -1,7 +1,7 @@
 <?php
 include_once __DIR__ . '/user.php';
 
-class registeredUser extends User
+class RegisteredUser extends User
 {
     private $discount = 20;
     private $subscriptionStart;

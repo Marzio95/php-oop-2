@@ -1,7 +1,7 @@
 <?php
 include_once __DIR__ . '/user.php';
 
-class unregisteredUser extends User
+class UnregisteredUser extends User
 {
     private $discount = 0;
 

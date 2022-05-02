@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . '../index.php';
+include_once __DIR__ . '/product.php';
 
 class Accessories extends Product
 {
