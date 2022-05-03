@@ -2,9 +2,9 @@
 
 class Product
 {
-    private $price;
-    private $finalPrice;
-    private $animal;
+    private  $price;
+    private  $finalPrice;
+    private  $animal;
 
     public function __construct($_price, $_animal)
     {
@@ -36,13 +36,17 @@ class Product
         return $this;
     }
 
-    public function setfinalPrice($registerdUser, $discount)
-    {
-        return $this->finalPrice = $this->price - ($this->price / 100 * $registerdUser->$discount);
-    }
-
     public function getfinalPrice()
     {
         return $this->finalPrice;
+    }
+
+    public function setfinalPrice($registerdUser, $discount)
+    {
+        if ($registerdUser->registered = true) {
+            return $this->finalPrice = $this->price - ($this->price / 100 * $registerdUser->discount);
+        } else {
+            return $this->finalPrice = $this->price;
+        }
     }
 }

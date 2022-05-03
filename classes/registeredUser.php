@@ -3,9 +3,10 @@ include_once __DIR__ . '/user.php';
 
 class RegisteredUser extends User
 {
-    private $discount = 20;
-    private $subscriptionStart;
-    private $subscriptionEnd;
+    private  $discount = 20;
+    private  $subscriptionStart;
+    private  $subscriptionEnd;
+    private  $registered = true;
 
     public function getDiscount()
     {
@@ -39,6 +40,18 @@ class RegisteredUser extends User
     public function setSubscriptionEnd($subscriptionEnd)
     {
         $this->subscriptionEnd = $subscriptionEnd;
+
+        return $this;
+    }
+
+    public function getRegistered()
+    {
+        return $this->registered;
+    }
+
+    public function setRegistered($registered)
+    {
+        $this->registered = $registered;
 
         return $this;
     }

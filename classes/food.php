@@ -3,8 +3,8 @@ include_once __DIR__ . '/product.php';
 
 class Food extends Product
 {
-    private $typeOfFood;
-    private $foodExpiration;
+    private  $typeOfFood;
+    private  $foodExpiration;
 
 
     public function getTypeOfFood()
